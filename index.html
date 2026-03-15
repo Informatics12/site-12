@@ -1,1 +1,162 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфоліо вчителя інформатики</title>
+    <style>
+        :root {
+            --primary: #6366f1;
+            --glass: rgba(255, 255, 255, 0.1);
+            --blur: blur(15px);
+        }
 
+        body {
+            margin: 0;
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            background: linear-gradient(-45deg, #0f172a, #1e1b4b, #312e81, #1e1b4b);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            padding: 50px;
+            background: var(--glass);
+            backdrop-filter: var(--blur);
+            -webkit-backdrop-filter: var(--blur);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 30px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        header {
+            margin-bottom: 40px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 16px;
+            background: rgba(99, 102, 241, 0.3);
+            border: 1px solid var(--primary);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+            background: linear-gradient(to right, #ffffff, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+
+        p.subtitle {
+            font-size: 1.1rem;
+            color: #cbd5e1;
+            margin-top: 10px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-align: left;
+        }
+
+        .card:hover {
+            transform: translateY(-12px);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--primary);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .card h3 {
+            color: #818cf8;
+            font-size: 1.4rem;
+            margin-top: 0;
+        }
+
+        .card p {
+            color: #94a3b8;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 50px;
+            padding: 15px 40px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            background: #4f46e5;
+            box-shadow: 0 6px 20px rgba(99, 102, 241, 0.6);
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="badge">Вчитель вищої категорії</div>
+        <h1>Марія Іванівна</h1>
+        <p class="subtitle">Світ алгоритмів, творчості та цифрових можливостей</p>
+    </header>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Алгоритмізація</h3>
+            <p>Вивчаємо логіку програмування від базових циклів до складних структур даних на Python та C++.</p>
+        </div>
+        <div class="card">
+            <h3>Web-технології</h3>
+            <p>Опановуємо мистецтво створення сайтів: від чистого HTML/CSS до інтерактивних елементів JavaScript.</p>
+        </div>
+        <div class="card">
+            <h3>Кібербезпека</h3>
+            <p>Навчаємось захищати дані та критично мислити у сучасному цифровому просторі.</p>
+        </div>
+    </div>
+
+    <a href="mailto:teacher@school.edu.ua" class="cta-button">Зв'язатися зі мною</a>
+</div>
+
+</body>
+</html>
